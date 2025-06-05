@@ -5,11 +5,8 @@ document
     // event.target.files to FileList - lista plików wybranych przez użytkownika
     // files[0] to jedyny plik z listy
     const file = event.target.files[0];
-
-    // Zabezpieczenie na wypadek, gdy użytkownik anuluje wybór pliku
     if (!file) return;
 
-    // Przez (obiekt) FileReader można czytać zawartość pliku
     const reader = new FileReader();
 
     // onload to zdarzenie wywoływane gdy plik zostanie wczytany
@@ -36,8 +33,6 @@ document
           // className ustawia atrybut 'class' elementu HTML
           el.className = `var${item.variant}`;
 
-          // Ustawiamy tekst zawartości elementu
-          // textContent jest bezpieczniejszy niż innerHTML, bo nie interpretuje HTML
           el.textContent = item.text;
 
           // Dodajemy stworzony element do kontenera
