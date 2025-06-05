@@ -3,15 +3,13 @@ document
   .addEventListener("change", function (event) {
     // Pobiera pierwszy wybrany plik
     // event.target.files to FileList - lista plików wybranych przez użytkownika
-    // files[0] to pierwszy (i w tym przypadku jedyny) plik z listy
+    // files[0] to jedyny plik z listy
     const file = event.target.files[0];
 
-    // Jeśli nie ma pliku, funkcja kończy działanie
-    // To zabezpieczenie na wypadek, gdyby użytkownik anulował wybór pliku
+    // Zabezpieczenie na wypadek, gdy użytkownik anuluje wybór pliku
     if (!file) return;
 
     // Przez (obiekt) FileReader można czytać zawartość pliku
-    // FileReader to wbudowana klasa w JavaScript do asynchronicznego czytania plików
     const reader = new FileReader();
 
     // onload to zdarzenie wywoływane gdy plik zostanie wczytany
@@ -26,14 +24,12 @@ document
         const container = document.getElementById("output");
 
         // Czyścimy kontener przed dodaniem nowych elementów
-        // innerHTML = "" usuwa całą zawartość elementu
         container.innerHTML = "";
 
         // Iterujemy przez każdy element w tablicy data
         // forEach wykonuje funkcję dla każdego elementu tablicy
         data.forEach((item) => {
-          // Tworzymy nowy element HTML o tagu podanym w JSON
-          // document.createElement() tworzy nowy element DOM, ale nie dodaje go jeszcze do strony
+          // Tworzenie nowego elementu HTML o tagu podanym w JSON
           const el = document.createElement(item.tag);
 
           // Ustawiamy klasę CSS w formacie "varX" gdzie X to numer wariantu
