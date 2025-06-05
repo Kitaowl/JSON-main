@@ -1,0 +1,5 @@
+[
+  { "tag": "p", "variant": 1, "text": "Coś" },
+  { "tag": "a", "variant": 2, "text": "Coś" },
+  { "tag": "p", "variant": 1, "text": "Coś" }
+]

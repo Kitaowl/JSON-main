@@ -1,0 +1,29 @@
+p.var1 {
+  color: rgb(66, 66, 217);
+  font-size: 20px;
+}
+
+p.var2 {
+  color: rgb(60, 204, 60);
+  font-style: italic;
+}
+
+a.var1 {
+  color: rgb(217, 90, 90);
+  text-decoration: underline;
+}
+
+a.var2 {
+  color: rgb(91, 220, 17);
+  font-weight: bold;
+}
+
+em.var1 {
+  color: rgb(192, 131, 18);
+  font-size: 20px;
+}
+
+em.var2 {
+  color: teal;
+  background-color: lightgray;
+}
